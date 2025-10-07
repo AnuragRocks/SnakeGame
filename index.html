@@ -9,14 +9,24 @@
 </head>
 <body>
   <div id="game">
-    <canvas id="canvas"></canvas>
+    <div id="topbar">
+      <div id="title">Snake</div>
+      <div id="actions">
+        <button id="fullscreen">⤢</button>
+        <button id="restart">Restart</button>
+      </div>
+    </div>
+
+    <canvas id="canvas" aria-label="Snake game canvas"></canvas>
+
     <div id="hud">
       <div id="score">Score: 0</div>
-      <button id="restart">Restart</button>
+      <div id="hint">Use touch, keyboard (WASD / arrows), or gamepad</div>
     </div>
-    <div id="touch-controls">
+
+    <div id="touch-controls" aria-hidden="false">
       <button id="up">▲</button>
-      <div>
+      <div class="row">
         <button id="left">◀</button>
         <button id="down">▼</button>
         <button id="right">▶</button>
